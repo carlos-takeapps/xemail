@@ -1,0 +1,32 @@
+<publishData>
+  <publishTarget publishUrl="D:\Inetpub\wwwroot\XEMail\">
+    <file relUrl="bin/SiProd.Utilities.Encoding.pdb" publishTime="08/03/2009 11:49:49" />
+    <file relUrl="bin/SiProd.Applications.XEMail.pdb" publishTime="08/05/2009 16:33:11" />
+    <file relUrl="bin/SiProd.Utilities.Network.Sockets.pdb" publishTime="08/03/2009 11:49:49" />
+    <file relUrl="bin/SiProd.Utilities.Network.Sockets.dll" publishTime="08/03/2009 11:49:49" />
+    <file relUrl="bin/SiProd.Utilities.Network.Email.dll" publishTime="08/05/2009 12:26:42" />
+    <file relUrl="bin/SiProd.BaseElements.Network.Email.pdb" publishTime="08/03/2009 11:49:48" />
+    <file relUrl="bin/SiProd.Applications.XEMail.dll.config" publishTime="08/05/2009 16:32:54" />
+    <file relUrl="bin/SiProd.Utilities.Encoding.dll" publishTime="08/03/2009 11:49:49" />
+    <file relUrl="bin/SiProd.BaseElements.Network.Email.dll" publishTime="08/03/2009 11:49:48" />
+    <file relUrl="Web.config" publishTime="08/05/2009 16:32:54" />
+    <file relUrl="bin/SiProd.Utilities.Network.Email.pdb" publishTime="08/05/2009 12:26:42" />
+    <file relUrl="bin/SiProd.Applications.XEMail.dll" publishTime="08/05/2009 16:33:11" />
+    <file relUrl="SiProd.Applications.XEMail.WCFService.XEMailService.svc" publishTime="08/05/2009 16:33:13" />
+  </publishTarget>
+  <publishTarget publishUrl="ftp://siprod.net/wwwroot/WCF/XEmail/">
+    <file relUrl="bin/SiProd.Utilities.Encoding.pdb" publishTime="08/03/2009 11:49:49" />
+    <file relUrl="bin/SiProd.Applications.XEMail.pdb" publishTime="08/05/2009 12:30:04" />
+    <file relUrl="bin/SiProd.Utilities.Network.Sockets.pdb" publishTime="08/03/2009 11:49:49" />
+    <file relUrl="bin/SiProd.Utilities.Network.Sockets.dll" publishTime="08/03/2009 11:49:49" />
+    <file relUrl="bin/SiProd.Utilities.Network.Email.dll" publishTime="08/05/2009 12:26:42" />
+    <file relUrl="bin/SiProd.BaseElements.Network.Email.pdb" publishTime="08/03/2009 11:49:48" />
+    <file relUrl="bin/SiProd.Applications.XEMail.dll.config" publishTime="08/05/2009 12:26:41" />
+    <file relUrl="bin/SiProd.BaseElements.Network.Email.dll" publishTime="08/03/2009 11:49:48" />
+    <file relUrl="Web.config" publishTime="08/05/2009 12:26:41" />
+    <file relUrl="bin/SiProd.Utilities.Network.Email.pdb" publishTime="08/05/2009 12:26:42" />
+    <file relUrl="bin/SiProd.Utilities.Encoding.dll" publishTime="08/03/2009 11:49:49" />
+    <file relUrl="bin/SiProd.Applications.XEMail.dll" publishTime="08/05/2009 12:30:04" />
+    <file relUrl="SiProd.Applications.XEMail.WCFService.XEMailService.svc" publishTime="08/05/2009 12:32:36" />
+  </publishTarget>
+</publishData>

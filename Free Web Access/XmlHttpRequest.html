@@ -1,0 +1,168 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title></title>
+
+    <script type="text/javascript" language="javascript"> 
+    
+    var myReq = createXMLHttpRequest(); 
+    
+    function createXMLHttpRequest() {
+        if (typeof XMLHttpRequest != "undefined") {
+            return new XMLHttpRequest();
+        } else if (typeof ActiveXObject != "undefined") {
+            return new ActiveXObject("Microsoft.XMLHTTP");
+        } else {
+            throw new Error("XMLHttpRequest not supported");
+        }
+    }
+    
+    function callWSMethod1() 
+    { 
+        if (window.XMLHttpRequest) 
+        {          
+            //var url = "http://localhost:1818/Webservice/XEmailWebService.asmx/GetAllPop3EMailsHeadersHtml";
+            var url = "http://webservices.siprod.net/xemail.asmx/GetAllPop3EMailsHeadersHtml";
+            
+            var params = "Server=" + tbServer.value;
+            params += "&Port=" + tbPort.value;
+            params += "&Username=" + tbUsername.value;
+            params +="&Password=" + tbPassword.value;
+            params +="&Ssl=" + tbSsl.value;
+            
+            myReq.open("POST", url, true);             
+            
+            //Send the proper header information along with the request
+            myReq.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            myReq.setRequestHeader("Content-length", params.length);
+            myReq.setRequestHeader("Connection", "close");
+        
+            myReq.onreadystatechange = CheckStatus1; 
+            myReq.send(params); 
+        } 
+    } 
+    function CheckStatus1() 
+    { 
+        if (myReq.readyState == 4) // Completed operation 
+        { 
+            var myDiv = document.getElementById('service');
+	        if(myDiv != null)
+	        {
+	            alert(myReq.statusText);
+	            alert(myReq.responseXML.text);
+		        myDiv.innerHTML = myReq.responseXML.text;
+		    }
+        } 
+    } 
+
+
+    </script>
+
+    <style type="text/css">
+        .style1
+        {
+            width: 134px;
+        }
+        .style2
+        {
+            width: 19px;
+        }
+        #Text1
+        {
+            width: 279px;
+        }
+        #Text2
+        {
+            width: 279px;
+        }
+        #Text3
+        {
+            width: 279px;
+        }
+        #Text4
+        {
+            width: 279px;
+        }
+        #Text5
+        {
+            width: 279px;
+        }
+        #tbUsername
+        {
+            width: 276px;
+        }
+        #tbPassword
+        {
+            width: 273px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="Div1">
+        <b>Build: 1.1</b>
+    </div>
+    <div id="service">
+        <table style="width:100%;">
+            <tr>
+                <td class="style1">
+                    Username</td>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+                    <input id="tbUsername" type="text" value="servicios@siprod.net"  /></td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    Password</td>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+                    <input id="tbPassword" type="text" value="Entrar99" /></td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    Server Name or IP</td>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+                    <input id="tbServer" type="text" value="mail.siprod.net" /></td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    Server Port</td>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+                    <input id="tbPort" type="text" value="110" /></td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    SSL enabled</td>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+                    <input id="tbSsl" type="text" value="false" /></td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    &nbsp;</td>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    &nbsp;</td>
+                <td class="style2">
+                    &nbsp;</td>
+                <td>
+    <button onclick="javascript:callWSMethod1()" id="Button1">
+        Check emails</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
